@@ -43,6 +43,7 @@ else
 	echo "CONTROLLE_ADDR environment varible is not set. Use the built in controller"
 	AGENT="${BASE_DIR}/builtin/ngrinder-agent"
 	cd ${AGENT}
+	rm -rf ~/.ngrinder_agent/pid
 	${AGENT}/run_agent.sh "$@"
 fi
 
